@@ -6,7 +6,8 @@ function SetUniqueRadioButton(nameregex, current)
 {
 
 	//-- Use as follows:
-	//-- <input value="radSize" type="radio" id="repCollectionModuleTabs_radSize_0" />	//-- radSize.Attributes.Add("onclick", "SetUniqueRadioButton('repCollectionModuleTabs_radSize', this);");
+	//-- <input value="radSize" type="radio" id="repCollectionModuleTabs_radSize_0" />
+	//-- radSize.Attributes.Add("onclick", "SetUniqueRadioButton('repCollectionModuleTabs_radSize', this);");
 
 	re = new RegExp(nameregex);
 
@@ -81,15 +82,6 @@ let UtilIndex = function()
 			if(! $(this).closest(".bs-select").length )
 				e.stopPropagation();
 		});	
-	};
-
-
-	let selectPickerView = function()
-	{
-		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent))
-			$('.bs-select').selectpicker('mobile');
-		else
-			$('.bs-select').selectpicker();
 	};
 	
 	
@@ -239,7 +231,6 @@ let UtilIndex = function()
 		init: function() {
 			preventClosingDropDown();
 			generateExpander();
-			selectPickerView();
 			expandLists();
 			setTickColor();
 			trimPageSubtitle(3);
